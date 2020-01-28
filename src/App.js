@@ -13,29 +13,30 @@ class App extends React.Component {
   handleChange(id) {
     this.setState(prevState => {
       const updatedToDoArray = prevState.todoObjects.map(newObject => {
-        
         if (newObject.id === id) {
           return {
-            ...newObject, completed : !newObject.completed
-          } 
+            ...newObject,
+            completed: !newObject.completed
+          };
         }
-        return (newObject)
-      })
-      console.log(prevState.newObject)
-      console.log(updatedToDoArray)
+        return newObject;
+      });
+      console.log(prevState.newObject);
+      console.log(updatedToDoArray);
       return {
-        todoObjects : updatedToDoArray
-      }
-    })
-
-    
-    
-
+        todoObjects: updatedToDoArray
+      };
+    });
   }
 
   render() {
     const todosArray = this.state.todoObjects.map(object => (
-      <MyToDoApp key={object.id} todoObject={object} Change = {this.handleChange} />
+      <MyToDoApp
+        key={object.id}
+        bool = {object.completed}
+        todoObject={object}
+        Change={this.handleChange}
+      />
     ));
 
     return <div className="todo-list">{todosArray}</div>;

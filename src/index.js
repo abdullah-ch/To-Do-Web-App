@@ -1,38 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom";
+//import Conditional from "./components/Conditional";
 import App from "./App";
 
 // class App extends React.Component {
 //   constructor() {
 //     super();
 //     this.state = {
-//       number: 0
+//       isLoading: false
 //     };
-//     this.handleClickIncrement = this.handleClickIncrement.bind(this);
-//     this.handleClickDecrement = this.handleClickDecrement.bind(this);
-//   }
-//   handleClickIncrement() {
-//     this.setState(prevState => {
-//       return {
-//         number: prevState.number + 1
-//       };
-//     });
+//     this.changinLoging = this.changinLoging.bind(this);
 //   }
 
-//   handleClickDecrement() {
+//   changinLoging() {
 //     this.setState(prevState => {
 //       return {
-//         number: prevState.number - 1
+//         ...prevState,
+//         isLoading: !prevState.isLoading
 //       };
 //     });
 //   }
 
 //   render() {
+//     console.log(this.state.isLoading);
+//     let buttonMessage = this.state.isLoading ? "Log Out" : "Log In"
 //     return (
 //       <div>
-//         <h1> {this.state.number}</h1>
-//         <button onClick={this.handleClickIncrement}> Add</button>
-//         <button onClick={this.handleClickDecrement}>Subtract</button>
+//         <Conditional accessObj={this.state.isLoading} />
+//         <button type="button" onClick={this.changinLoging}>
+//           {" "}
+//           {buttonMessage}
+//         </button>
 //       </div>
 //     );
 //   }
